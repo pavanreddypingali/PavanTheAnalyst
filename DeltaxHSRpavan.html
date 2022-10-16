@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Web Configuration</title>
+	<link rel="stylesheet" href="DeltaxStyling.css">
+	<link href='https://fonts.googleapis.com/css?family=Abril Fatface' rel='stylesheet'>
+</head>
+
+<div class="header">
+	<h1>HSR MOTORS</h1>
+</div>
+
+<body>
+	<!-- Tab links -->
+
+	<div class="tab">
+		<button class="tablinks" onclick="openTab(event, 'CallCenterEvent')">CALL CENTER</button>
+		<button class="tablinks" onclick="openTab(event, 'SalesAssistantEvent')">SALES ASSISTANT</button>
+		<button class="tablinks" onclick="openTab(event, 'BusinessManagerEvent')">BUSINESS MANAGER</button>
+		<button class="tablinks" onclick="openTab(event, 'ASSpecialistEvent')">AFTER-SALES SPECIALIST</button>
+	</div>
+
+	<!-- CallCenter Tab content -->
+	<div id="CallCenterEvent" class="tabcontent">
+		<form id="CallCenterForm" name="CCForm" method="post" enctype='application/json' action="/callcenter">
+			<div>
+				<table style="width:100%;border: 1px solid #333;" id="CallCenterTable">
+					<tr>
+						<th style="width:16%;border: 1px solid #333;" id="CName">Customer Name</th>
+						<th style="width:16%;border: 1px solid #333;" id="Contact">Contact</th>
+						<th style="width:16%;border: 1px solid #333;" id="CRequirement">Coustomer Requirement</th>
+						<th style="width:16%;border: 1px solid #333;" id="Review">Coustomer Review</th>
+						<th style="width:16%;border: 1px solid #333;" id="CII">Coustomer Interest Index</th>
+						<th style="width:16%;border: 1px solid #333;" id="CidInfo">Coustomer ID allotment</th>
+					</tr>
+					<tr>
+						<td style="width:16%;border: 1px solid #333;">Pavan</td>
+						<td style="width:16%;border: 1px solid #333;">1234</td>
+						<td style="width:16%;border: 1px solid #333;">5Hp motor, water immerseble</td>
+						<td style="width:16%;border: 1px solid #333;">satisfied</td>
+						<td style="width:16%;border: 1px solid #333;">8</td>
+						<td style="width:16%;border: 1px solid #333;">Yes</td>
+					</tr>
+					<tr>
+						<td style="width:16%;border: 1px solid #333;">Prakash</td>
+						<td style="width:16%;border: 1px solid #333;">4321</td>
+						<td style="width:16%;border: 1px solid #333;">no data</td>
+						<td style="width:16%;border: 1px solid #333;">not satisfied</td>
+						<td style="width:16%;border: 1px solid #333;">3</td>
+						<td style="width:16%;border: 1px solid #333;">No</td>
+					</tr>
+					<tr>
+						<td style="width:16%;border: 1px solid #333;">Akhil</td>
+						<td style="width:16%;border: 1px solid #333;">5555</td>
+						<td style="width:16%;border: 1px solid #333;">any motor</td>
+						<td style="width:16%;border: 1px solid #333;">satisfied</td>
+						<td style="width:16%;border: 1px solid #333;">7</td>
+						<td style="width:16%;border: 1px solid #333;">Yes</td>
+					</tr>
+					<tr>
+						<td style="width:16%;border: 1px solid #333;">Satvik</td>
+						<td style="width:16%;border: 1px solid #333;">9292</td>
+						<td style="width:16%;border: 1px solid #333;">only that motor</td>
+						<td style="width:16%;border: 1px solid #333;">ok</td>
+						<td style="width:16%;border: 1px solid #333;">6</td>
+						<td style="width:16%;border: 1px solid #333;">Yes</td>
+					</tr>
+					<tr>
+						<td style="width:16%;border: 1px solid #333;">sai nikhil</td>
+						<td style="width:16%;border: 1px solid #333;">4664</td>
+						<td style="width:16%;border: 1px solid #333;">servo</td>
+						<td style="width:16%;border: 1px solid #333;">excellent</td>
+						<td style="width:16%;border: 1px solid #333;">9</td>
+						<td style="width:16%;border: 1px solid #333;">Yes</td>
+					</tr>
+				</table>
+			</div>
+			</BR>
+			<div>
+				<button class="AddLeadButton" onclick="addlead()">ADD LEAD</button>
+			</div>
+			</BR>
+		</form>
+	</div>
+
+	<!-- SalesAssistant Tab content -->
+	<div id="SalesAssistantEvent" class="tabcontent">
+		<form id="SalesAssistantform" name="SForm" method="post" enctype='application/json' action="/sales">
+			<div>
+				<table style="width:100%;border: 1px solid #333;" id="SalesAssistantTable">
+					<tr>
+						<th style="width:20%;border: 1px solid #333;" id="CID">Customer Id</th>
+						<th style="width:20%;border: 1px solid #333;" id="Cname">Customer Name</th>
+						<th style="width:20%;border: 1px solid #333;" id="CQuery">Coustomer Query</th>
+						<th style="width:20%;border: 1px solid #333;" id="CQSatus">Coustomer Query Status</th>
+						<th style="width:20%;border: 1px solid #333;" id="Remarks">Remarks</th>
+					</tr>
+					<tr>
+						<td style="width:20%;border: 1px solid #333;">cid1</td>
+						<td style="width:20%;border: 1px solid #333;">Pavan</td>
+						<td style="width:20%;border: 1px solid #333;">upadate on motor data sheet</td>
+						<td style="width:20%;border: 1px solid #333;">Responded to Query</td>
+						<td style="width:20%;border: 1px solid #333;">none</td>
+					</tr>
+					<tr>
+						<td style="width:20%;border: 1px solid #333;">cid2</td>
+						<td style="width:20%;border: 1px solid #333;">Akhil</td>
+						<td style="width:20%;border: 1px solid #333;">motor suggestion for bulk water pump application
+						</td>
+						<td style="width:20%;border: 1px solid #333;">Responded to Query</td>
+						<td style="width:20%;border: 1px solid #333;">Schedule Contact time</td>
+					</tr>
+					<tr>
+						<td style="width:20%;border: 1px solid #333;">cid3</td>
+						<td style="width:20%;border: 1px solid #333;">Satvik</td>
+						<td style="width:20%;border: 1px solid #333;">No Query</td>
+						<td style="width:20%;border: 1px solid #333;">Not Responded to Query </td>
+						<td style="width:20%;border: 1px solid #333;">Respond to Query through mail</td>
+					</tr>
+					<tr>
+						<td style="width:20%;border: 1px solid #333;">cid4</td>
+						<td style="width:20%;border: 1px solid #333;">Sai Nikhil</td>
+						<td style="width:20%;border: 1px solid #333;">Price Bargain</td>
+						<td style="width:20%;border: 1px solid #333;">Responded to Query</td>
+						<td style="width:20%;border: 1px solid #333;">Cannot continue further</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</div>
+
+	<!-- BusinessManager Tab content -->
+	<div id="BusinessManagerEvent" class="tabcontent">
+		<form id="BusinessManagerForm" name="BMForm" method="post" enctype='application/json' action="/businessmanager">
+			<div>
+				<table style="width:100%;border: 1px solid #333;" id="SalesAssistantTable">
+					<tr>
+						<th style="width:14%;border: 1px solid #333;" id="CID">Customer Id</th>
+						<th style="width:14%;border: 1px solid #333;" id="Cname">Customer name</th>
+						<th style="width:14%;border: 1px solid #333;" id="SaleData">Sale Data</th>
+						<th style="width:14%;border: 1px solid #333;" id="PID">Product ID</th>
+						<th style="width:14%;border: 1px solid #333;" id="ProductPrice">Product Price</th>
+						<th style="width:14%;border: 1px solid #333;" id="DateofSale">Date of Sale</th>
+						<th style="width:14%;border: 1px solid #333;" id="Remarks">Remarks</th>
+					</tr>
+					<tr>
+						<td style="width:14%;border: 1px solid #333;">cid1</td>
+						<td style="width:14%;border: 1px solid #333;">Pavan</td>
+						<td style="width:14%;border: 1px solid #333;">Purchase Confirm</td>
+						<td style="width:14%;border: 1px solid #333;">P01</td>					
+						<td style="width:14%;border: 1px solid #333;">4,00,000</td>
+						<td style="width:14%;border: 1px solid #333;">01-01-2023</td>
+						<td style="width:14%;border: 1px solid #333;">To Warrenty server</td>
+					</tr>
+					<tr>
+						<td style="width:14%;border: 1px solid #333;">cid2</td>
+						<td style="width:14%;border: 1px solid #333;">Akhil</td>
+						<td style="width:14%;border: 1px solid #333;">Yet to Purchase</td>
+						<td style="width:14%;border: 1px solid #333;"> -- </td>
+						<td style="width:14%;border: 1px solid #333;"> -- </td>
+						<td style="width:14%;border: 1px solid #333;"> -- </td>
+						<td style="width:14%;border: 1px solid #333;">Schedule Contact for sales talk</td>
+					</tr>
+					<tr>
+						<td style="width:14%;border: 1px solid #333;">cid3</td>
+						<td style="width:14%;border: 1px solid #333;">Satvik</td>
+						<td style="width:14%;border: 1px solid #333;">P999</td>
+						<td style="width:14%;border: 1px solid #333;">Purchase Confirm</td>
+						<td style="width:14%;border: 1px solid #333;">7,30,099</td>
+						<td style="width:14%;border: 1px solid #333;">29-02-2024</td>
+						<td style="width:14%;border: 1px solid #333;">To Warrenty server</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</div>
+
+	<!-- ASSpecialist Tab content -->
+	<div id="ASSpecialistEvent" class="tabcontent">
+		<form id="ASSpecialistFoem" name="ASSForm" method="post" enctype='application/json' action="/asspecialist">
+			<div>
+				<table>
+					<tr>
+						<th style="width:14%;border: 1px solid #333;" id="CID">Customer Id</th>
+						<th style="width:14%;border: 1px solid #333;" id="Cname">Customer name</th>
+						<th style="width:14%;border: 1px solid #333;" id="InstallationScheduled">Product Installation Schedule</th>
+						<th style="width:14%;border: 1px solid #333;" id="IEID">Installing Empolyee Id</th>
+						<th style="width:14%;border: 1px solid #333;" id="CoustomerReview">Product Id</th>
+						<th style="width:14%;border: 1px solid #333;" id="RTC">Rate the Coustomer</th>
+						<th style="width:14%;border: 1px solid #333;" id="Remarks">Remarks</th>
+					</tr>
+					<tr>
+						<td style="width:14%;border: 1px solid #333;">cid1</td>
+						<td style="width:14%;border: 1px solid #333;">Pavan</td>
+						<td style="width:14%;border: 1px solid #333;">Not Sheduled</td>
+						<td style="width:14%;border: 1px solid #333;"> -- </td>
+						<td style="width:14%;border: 1px solid #333;">P01</td>
+						<td style="width:14%;border: 1px solid #333;">8</td>
+						<td style="width:14%;border: 1px solid #333;">Schedule the Installation</td>
+					</tr>
+					<tr>
+						<td style="width:14%;border: 1px solid #333;">cid3</td>
+						<td style="width:14%;border: 1px solid #333;">Satvik</td>
+						<td style="width:14%;border: 1px solid #333;">Sheduled</td>
+						<td style="width:14%;border: 1px solid #333;">0777</td>
+						<td style="width:14%;border: 1px solid #333;">P999</td>
+						<td style="width:14%;border: 1px solid #333;">9</td>
+						<td style="width:14%;border: 1px solid #333;">Advertide this Coustomer on new arraival of similar products</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</div>
+	<!--Tab Content Ended-->
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+	<script>
+
+		function addlead() {
+
+			let CName = prompt("Coustomer Namr: ");
+			let Contact = prompt("Contact Number: ");
+			let CRequirement = prompt("Requirement: ");
+			let Review = prompt("Review");
+			let CII = prompt("Coustomer Interest Index");
+			console.log(CName, Contact, CRequirement, Review, CII);
+
+			//CallCenterTable = document.getElementById("CallCenterTable");
+
+			//var CoustomerDataSet = document.createElement("input");
+
+			//CoustomerDataSet.innerHTML = "kjhdkshdkjahd";
+			//CallCenterTable.appendchild(CoustomerDataSet);
+
+			// var td1 = document.createElement("td");
+			// td1.innerhtml = CName;
+			// CoustomerDataSet.appendchild(td1);
+
+			// var td2 = document.createElement("td");
+			// td2.innerhtml = Contact;
+			// CoustomerDataSet.appendchild(td2);
+
+			// var td3 = document.createElement("td");
+			// td3.innerhtml = CRequirement;
+			// CoustomerDataSet.appendchild(td3);
+
+			// var td4 = document.createElement("td");
+			// td4.innerhtml = Review;
+			// CoustomerDataSet.appendchild(td4);
+
+			// var td5 = document.createElement("td");
+			// td5.innerhtml = CII;
+			// CoustomerDataSet.appendchild(td5);
+
+			//CallCenterTable.appendchild(CoustomerDataSet);
+
+		}
+		function openTab(evt, cityName) {	//function open tab called at creation of tabs at starting 
+			// Declare all variables
+			var i, tabcontent, tablinks;
+
+			// Get all elements with class="tabcontent" and hide them
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+
+			// Get all elements with class="tablinks" and remove the class "active"
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+
+			// Show the current tab, and add an "active" class to the button that opened the tab
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+
+			//var form = document.querySelector('form');				
+			//alert("form selected: ");				
+		}
+	</script>
+</body>
+
+</html>
